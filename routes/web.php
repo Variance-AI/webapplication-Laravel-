@@ -7,3 +7,4 @@ include $__dir . 'Web_content/Webcontent.php';
 include $__dir . 'Users_and_Agencies/__USERS__AGENCIES.php';
 include $__dir . 'Ideas_and_Packages/Ideas_and_Packages.php';
 include $__dir . 'TripIdeasCategories/TripIdeasCategories.php';
+include $__dir . 'siteMap/siteMap.php';
