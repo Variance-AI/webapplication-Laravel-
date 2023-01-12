@@ -1,18 +1,9 @@
 <?php
-
-use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
-});
+$__dir = 'RoutesComponents/';
+include $__dir .  'Avuxi/Avuxi.php';
+include $__dir . 'LogSystem/LogSystem.php';
+include $__dir . 'Contracts/Contracts.php';
+include $__dir . 'Web_content/Webcontent.php';
+include $__dir . 'Users_and_Agencies/__USERS__AGENCIES.php';
+include $__dir . 'Ideas_and_Packages/Ideas_and_Packages.php';
+include $__dir . 'TripIdeasCategories/TripIdeasCategories.php';
