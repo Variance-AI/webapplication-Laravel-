@@ -1,0 +1,1503 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "",
+        "version": "... BOOKPERFECT API DESIGNED BY HOTELISTAN COMPANY ..."
+    },
+    "servers": [
+        {
+            "url": "https://test.hitrooms.com/rest-api"
+        }
+    ],
+    "paths": {
+        "/get__agencies__all": {
+            "get": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "Return agencies by microsite",
+                "operationId": "1",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__agencies__id/{id}": {
+            "get": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "Return agency by its ID",
+                "operationId": "2",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__agencyCredit/{agency}": {
+            "get": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "Return agency credit balance by its ID",
+                "operationId": "3",
+                "parameters": [
+                    {
+                        "name": "agency",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__agencyManager/{agencyManagerID}": {
+            "get": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "Return agency manager by its ID",
+                "operationId": "4",
+                "parameters": [
+                    {
+                        "name": "agencyManagerID",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__usersbyAgency/{agencyId}": {
+            "get": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "Return users by agency",
+                "operationId": "5",
+                "parameters": [
+                    {
+                        "name": "agencyId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__user_id/{username}": {
+            "get": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "Return user by its ID",
+                "operationId": "6",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__alluser": {
+            "get": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "Return users and copy Cloud database user info in middel Server Database",
+                "operationId": "7",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/create__user": {
+            "post": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "Creates a new user",
+                "operationId": "8",
+                "parameters": [
+                    {
+                        "name": "Email",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Name",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Lastname",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Country",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Telephone",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Password",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/update__user": {
+            "put": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "Updates an existing user",
+                "operationId": "9",
+                "parameters": [
+                    {
+                        "name": "Email",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Name",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Lastname",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Country",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Telephone",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Password",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__Booking_all/{from}/{to}": {
+            "get": {
+                "tags": [
+                    "@Booking"
+                ],
+                "summary": "Return bookings by operator or microsite",
+                "operationId": "10",
+                "parameters": [
+                    {
+                        "name": "from",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "to",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "lang",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__Booking_ref/{ref}": {
+            "get": {
+                "tags": [
+                    "@Booking"
+                ],
+                "summary": "Return booking by reference",
+                "operationId": "11",
+                "parameters": [
+                    {
+                        "name": "ref",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get_Closed_Tour/{suplierid}/{closedtourcode}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "Return closed tour by its code",
+                "operationId": "12",
+                "parameters": [
+                    {
+                        "name": "suplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "closedtourcode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get_closedTour_optionCode/{suplierid}/{closedtourcode}/{optionCode}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "Return closed tour options by code",
+                "operationId": "13",
+                "parameters": [
+                    {
+                        "name": "suplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "closedtourcode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "optionCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__golfbySupplier/{supplierid}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "Return golf contracts by supplier",
+                "operationId": "14",
+                "parameters": [
+                    {
+                        "name": "supplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__hotel/{supplierid}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "Return hotels by supplier",
+                "operationId": "15",
+                "parameters": [
+                    {
+                        "name": "supplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__hotel_supplierid_provider_code/{supplierid}/{providercode}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "Return hotel by its provider code",
+                "operationId": "16",
+                "parameters": [
+                    {
+                        "name": "supplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "providercode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/supplier": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "Return suppliers of operator",
+                "operationId": "17",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/suppliers/{supplierId}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "Return supplier by its code",
+                "operationId": "18",
+                "parameters": [
+                    {
+                        "name": "supplierId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__ticket_supplierid/{supplierid}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "Return tickets by supplier",
+                "operationId": "19",
+                "parameters": [
+                    {
+                        "name": "supplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__ticket/{supplierid}/{ticketcode}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "Return ticket by its code",
+                "operationId": "20",
+                "parameters": [
+                    {
+                        "name": "supplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "ticketcode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__transfer/{supplierid}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "Return transfers by supplier",
+                "operationId": "21",
+                "parameters": [
+                    {
+                        "name": "supplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__transfer_supplierid_transferid/{supplierid}/{transferid}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "Return transfer by its id",
+                "operationId": "22",
+                "parameters": [
+                    {
+                        "name": "supplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "transferid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/transfer/zones/{supplierId}/{ZoneType}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "Return transfer zones",
+                "operationId": "23",
+                "parameters": [
+                    {
+                        "name": "supplierId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "ZoneType",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__transport/{supplierid}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "Return transports by supplier",
+                "operationId": "24",
+                "parameters": [
+                    {
+                        "name": "supplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__transport_id/{supplierid}/{transportid}": {
+            "get": {
+                "tags": [
+                    "@Contracts"
+                ],
+                "summary": "Return transports by its ID",
+                "operationId": "25",
+                "parameters": [
+                    {
+                        "name": "supplierid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "transportid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__accommodations__by__id/{accommodationId}": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "Returns a accommodation datasheet",
+                "operationId": "26",
+                "parameters": [
+                    {
+                        "name": "accommodationId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Lan",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__promotioncode": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "Return promotional codes by microsite",
+                "operationId": "27",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__accommodations__all": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "Return preferred accommodations",
+                "operationId": "28",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__airline__all": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "Return airlines by microsite",
+                "operationId": "29",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__countries__all": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "Return countries",
+                "operationId": "30",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__destination__by_code/{code}": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "Return destination by ID",
+                "operationId": "31",
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__mealplan": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "Return meal plans by microsite",
+                "operationId": "32",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__preferredticket": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "Return preferred tickets",
+                "operationId": "33",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__theme": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "Return themes by microsite",
+                "operationId": "34",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/push_transportBase": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "Return transport bases by microsite and it copy cloud transport db into localdb",
+                "operationId": "35",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__ideas/{language}/{currency}/{country}": {
+            "get": {
+                "tags": [
+                    "@Ideas and Packages"
+                ],
+                "summary": "Return ideas by microsite",
+                "operationId": "36",
+                "parameters": [
+                    {
+                        "name": "language",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "currency",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "country",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__package__all": {
+            "get": {
+                "tags": [
+                    "@Ideas and Packages"
+                ],
+                "summary": "Return holiday packages by microsite",
+                "operationId": "37",
+                "parameters": [
+                    {
+                        "name": "origin Code",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "month",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "enum",
+                                "enum": [
+                                    "January",
+                                    "February",
+                                    "March",
+                                    "April",
+                                    "May",
+                                    "June",
+                                    "July",
+                                    "August",
+                                    "September",
+                                    "October",
+                                    "November",
+                                    "December"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "destinations",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "lang",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "currency",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "countryCode",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "onlyVisible",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "fromCreationDate",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "toCreationDate",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "first",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "integer($int32)"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "provider",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__package__holidayPackage_id_CURRENCY/{holidayPackageId}/{currency}": {
+            "get": {
+                "tags": [
+                    "@Ideas and Packages"
+                ],
+                "summary": "Return holiday package calendar by its ID",
+                "operationId": "38",
+                "parameters": [
+                    {
+                        "name": "holidayPackageId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "currency",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__package__holidayPackage_id_LAN_CURRENCY/{holidayPackageId}/{Lang}/{Currency}": {
+            "get": {
+                "tags": [
+                    "@Ideas and Packages"
+                ],
+                "summary": "Return holiday package by its ID",
+                "operationId": "39",
+                "parameters": [
+                    {
+                        "name": "holidayPackageId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Lang",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Currency",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__travelidea_idea_language/{idea}/{lang}": {
+            "get": {
+                "tags": [
+                    "@Ideas and Packages"
+                ],
+                "summary": "Return idea details by its ID",
+                "operationId": "40",
+                "parameters": [
+                    {
+                        "name": "idea",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "lang",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__travelidea_ideaid_lan_currency/{idea}/{lang}/{currency}": {
+            "get": {
+                "tags": [
+                    "@Ideas and Packages"
+                ],
+                "summary": "Return idea by its ID",
+                "operationId": "41",
+                "parameters": [
+                    {
+                        "name": "idea",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "lang",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "currency",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/create__TripIdeasCategories": {
+            "post": {
+                "tags": [
+                    "@TripIdeasCategories"
+                ],
+                "summary": "Create New IdeasCategory",
+                "operationId": "42",
+                "parameters": [
+                    {
+                        "name": "HotelLocationCity",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "HotelLocationCountry",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "HotelLocationContinent",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "HotelID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "HotelStartRate",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "DrupalCityID",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/delete__TripIdeasCategories/{HotelId}": {
+            "get": {
+                "tags": [
+                    "@TripIdeasCategories"
+                ],
+                "summary": "Delete Hotel By id",
+                "operationId": "43",
+                "parameters": [
+                    {
+                        "name": "HotelId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__TripIdeasCategoriesHotelten__by__name/{city}": {
+            "get": {
+                "tags": [
+                    "@TripIdeasCategories"
+                ],
+                "summary": "Get 10 top Hotel Id",
+                "operationId": "44",
+                "parameters": [
+                    {
+                        "name": "city",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__TripIdeasCategories__by__name/{city}": {
+            "get": {
+                "tags": [
+                    "@TripIdeasCategories"
+                ],
+                "summary": "Get TripIdeasCategories",
+                "operationId": "45",
+                "parameters": [
+                    {
+                        "name": "city",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__TripIdeasCategories__by__id/{id}": {
+            "get": {
+                "tags": [
+                    "@TripIdeasCategories"
+                ],
+                "summary": "Return tripideas by id",
+                "operationId": "46",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/update__TripIdeasCategories": {
+            "put": {
+                "tags": [
+                    "@TripIdeasCategories"
+                ],
+                "summary": "Update TripIdeas",
+                "operationId": "47",
+                "parameters": [
+                    {
+                        "name": "HotelID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "NewHotelID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "DrupalCityID",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "int"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__user/{username}/{password}": {
+            "get": {
+                "tags": [
+                    "@Users and Agencies"
+                ],
+                "summary": "Return auth token",
+                "operationId": "48",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__destination__all": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "Return destinations",
+                "operationId": "49",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/get__transportbase__id/{countryCode}/{code}": {
+            "get": {
+                "tags": [
+                    "@Web content"
+                ],
+                "summary": "Return country by it's code and it's countryCode",
+                "operationId": "51",
+                "parameters": [
+                    {
+                        "name": "countryCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "code",
+                        "in": "path",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    }
+}
