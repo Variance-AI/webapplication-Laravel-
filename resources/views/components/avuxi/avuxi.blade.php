@@ -27,5 +27,15 @@
                 </form>
             </div>
         </div>
+        <div class="animationContainer">
+            <div class="animationFrame">
+                <div class="animation"></div>
+                <div class="animation2"></div>
+                <div class="animation3"></div>
+                <div class="animation4"></div>
+                <div class="animation5"><img width="150" height="150"
+                        src="{{ asset('public/img/Internet-PNG-Clipart.png') }}" /></div>
+            </div>
+        </div>
     </div>
 @endsection
