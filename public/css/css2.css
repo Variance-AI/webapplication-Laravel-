@@ -21,13 +21,13 @@
 
 .mapSection {
     width: 60%;
+    border-right:2px solid gray;
 }
 
 .citiesSection {
     width: 20%;
     max-height: 100vh;
     overflow-y: scroll;
-    border-left: 2px solid gray;
 }
 
 .addSectionLogo {
