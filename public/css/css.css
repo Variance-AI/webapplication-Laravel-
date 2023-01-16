@@ -244,3 +244,18 @@ body {
 .animation5 {
     transform: translateY(-40px);
 }
+
+.alertContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 60px;
+    margin: 5px 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #c0392b;
+}

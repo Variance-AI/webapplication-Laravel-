@@ -30,6 +30,7 @@ Route::get('/avuxi.auth', function (Request $request) {
     $checkUser = adminCheck::where('userID', '=', $request->userid)->where('password', '=', $request->password)->get();
     $cities = geoLocation::all();
     if (count($checkUser) < 1) {
+        \session()->flash('Error1', 'userID and password are required');
         return back();
     } else {
         foreach ($checkUser as $item) {
@@ -43,14 +44,21 @@ Route::get('/avuxi.add', function (Request $request) {
     $status = adminCheck::find($request->id)->status;
 
     if ($status == 1 && $request->location != '' && $request->longitude != '' && $request->latitude != '') {
+        $unique = geoLocation::where('location', '=', strtolower($request->location))->get();
+        if (count($unique) < 1) {
+            geoLocation::create([
+                'location' => strtolower($request->location),
+                'longitude' => $request->longitude,
+                'latitude' => $request->latitude,
+            ]);
+            \session()->flash('Success', 'Location added');
+        } else {
+            \session()->flash('Error1', 'This Location Already recorded');
+        }
 
-        geoLocation::create([
-            'location' => $request->location,
-            'longitude' => $request->longitude,
-            'latitude' => $request->latitude,
-        ]);
         return back();
     } else {
+        \session()->flash('Error1', 'Location Or Longitude Or Latitude are required');
         return back();
     }
 })->name('add');
